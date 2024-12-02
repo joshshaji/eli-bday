@@ -1,0 +1,101 @@
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px; /* Make the carousel container wider */
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    perspective: 1200px; /* Increase perspective for more depth */
+    background: none;
+    box-shadow: none;
+  }
+  
+  .carousel-slide {
+    position: absolute;
+    width: 50%; /* Make slides narrower for a more stretched layout */
+    height: 80%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    border: none; /* Remove borders */
+    box-shadow: 0px 20px 40px rgba(255, 105, 180, 0.5); /* Highlight active slide */
+  }
+  
+  /* Center Slide */
+  .carousel-slide:nth-child(2) {
+    transform: translateX(0) scale(1);
+    opacity: 1; /* Fully visible */
+  }
+  
+  /* Left Slide */
+  .carousel-slide:nth-child(1) {
+    transform: translateX(-80%) scale(0.7); /* Push further left */
+    opacity: 0.4; /* More faded */
+  }
+  
+  /* Right Slide */
+  .carousel-slide:nth-child(3) {
+    transform: translateX(80%) scale(0.7); /* Push further right */
+    opacity: 0.4; /* More faded */
+  }
+  
+  /* Smooth Fade Effect for Edges */
+  .carousel-container::before,
+  .carousel-container::after {
+    content: "";
+    position: absolute;
+    width: 15%; /* Reduce width of gradient fade for better visibility */
+    height: 100%;
+    top: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  
+  /* Caption (Optional) */
+  .slide-caption {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .carousel-container {
+      max-width: 90%; /* Adjust width for smaller screens */
+    }
+  
+    .carousel-slide {
+      width: 70%;
+      height: 70%;
+    }
+  
+    .carousel-slide:nth-child(1),
+    .carousel-slide:nth-child(3) {
+      transform: translateX(-60%) scale(0.6); /* Adjust offsets for smaller screens */
+      opacity: 0.3; /* More faded */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel-slide {
+      width: 80%;
+      height: 60%;
+    }
+  
+    .carousel-slide:nth-child(1),
+    .carousel-slide:nth-child(3) {
+      transform: translateX(-40%) scale(0.5); /* Adjust offsets further for small devices */
+      opacity: 0.2; /* Heavily faded */
+    }
+  }
