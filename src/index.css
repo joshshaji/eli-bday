@@ -18,6 +18,7 @@ body {
   border-radius: 20px;
   box-shadow: none; /* Remove shadow */
   backdrop-filter: none; /* Disable blur effect */
+  padding-bottom: 50px;
 }
 
 .timer-container {
@@ -63,6 +64,7 @@ body {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+
 .content {
   display: flex;
   flex-direction: column;
@@ -70,7 +72,7 @@ body {
   gap: 30px;
   max-width: 700px;
   width: 100%;
-  padding: 20px;
+  height: 100%;
 }
 
 

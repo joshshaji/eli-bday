@@ -4,7 +4,7 @@
     align-items: center;
     width: 100%;
     max-width: 1400px; /* Make the carousel container wider */
-    height: 400px;
+    height: 100%;
     position: relative;
     overflow: hidden;
     perspective: 1200px; /* Increase perspective for more depth */
@@ -15,7 +15,7 @@
   .carousel-slide {
     position: absolute;
     width: 50%; /* Make slides narrower for a more stretched layout */
-    height: 80%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     border-radius: 15px;
@@ -77,7 +77,7 @@
   
     .carousel-slide {
       width: 70%;
-      height: 70%;
+      height: 100%;
     }
   
     .carousel-slide:nth-child(1),

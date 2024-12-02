@@ -12,7 +12,7 @@ const Countdown = () => {
   }, []);
 
   function calculateTimeLeft() {
-    const birthday = new Date("2024-12-25T00:00:00"); // Replace with your date
+    const birthday = new Date("2024-12-18T05:00:00.000Z"); // Replace with your date
     const now = new Date();
     const difference = birthday - now;
 
@@ -34,7 +34,7 @@ const Countdown = () => {
   return (
     <div className="countdown-container">
       <animated.div style={glowEffect} className="timer-container">
-        <h1>Countdown to Her Special Day</h1>
+        <h1>Cuenta regresiva para tu cumpleaños 🥰</h1>
         <div className="timer">
     <div>
         <span>{timeLeft.days}</span>
