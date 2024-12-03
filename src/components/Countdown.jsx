@@ -38,19 +38,19 @@ const Countdown = () => {
         <div className="timer">
     <div>
         <span>{timeLeft.days}</span>
-        <p>Days</p>
+        <p>Días</p>
     </div>
     <div>
         <span>{timeLeft.hours}</span>
-        <p>Hours</p>
+        <p>Horas</p>
     </div>
     <div>
         <span>{timeLeft.minutes}</span>
-        <p>Minutes</p>
+        <p>Min</p>
     </div>
     <div>
         <span>{timeLeft.seconds}</span>
-        <p>Seconds</p>
+        <p>Seg</p>
     </div>
     </div>
       </animated.div>

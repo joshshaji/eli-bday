@@ -11,6 +11,7 @@
     background-size: 200% 200%;
     animation: gradientShift 15s ease-in-out infinite;
     z-index: -1; /* Place behind other content */
+    pointer-events: none; /* Allow scrolling through the background */
   }
   
   /* Gradient Animation */

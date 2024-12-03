@@ -4,18 +4,20 @@
     align-items: center;
     width: 100%;
     max-width: 1400px; /* Make the carousel container wider */
-    height: 100%;
+    height: 400px; /* Set a fixed height */
     position: relative;
     overflow: hidden;
     perspective: 1200px; /* Increase perspective for more depth */
     background: none;
     box-shadow: none;
+    padding-bottom: 20px;
+    padding-top: 20px;
   }
   
   .carousel-slide {
     position: absolute;
-    width: 50%; /* Make slides narrower for a more stretched layout */
-    height: 100%;
+    width: 400px; /* Make slides narrower for a more stretched layout */
+    height: 100%; /* Ensure slides fill the container */
     background-size: cover;
     background-position: center;
     border-radius: 15px;
@@ -72,13 +74,13 @@
   /* Responsive Adjustments */
   @media (max-width: 768px) {
     .carousel-container {
-      max-width: 90%; /* Adjust width for smaller screens */
+      max-width: 100%; /* Adjust width for smaller screens */
     }
   
-    .carousel-slide {
+    /* .carousel-slide {
       width: 70%;
       height: 100%;
-    }
+    } */
   
     .carousel-slide:nth-child(1),
     .carousel-slide:nth-child(3) {
@@ -89,9 +91,22 @@
   
   @media (max-width: 480px) {
     .carousel-slide {
-      width: 80%;
-      height: 60%;
+      width: 300px;
+      height: 300px;
     }
+  
+    .carousel-slide:nth-child(1),
+    .carousel-slide:nth-child(3) {
+      transform: translateX(-40%) scale(0.5); /* Adjust offsets further for small devices */
+      opacity: 0.2; /* Heavily faded */
+    }
+  }
+
+  @media (max-height: 430) {
+    .carousel-container {
+        max-height: 300px;
+        height: 300px;
+      }
   
     .carousel-slide:nth-child(1),
     .carousel-slide:nth-child(3) {

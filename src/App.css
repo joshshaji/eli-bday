@@ -37,13 +37,14 @@
   }
 }
 
+
 .app {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Stack elements vertically */
   align-items: center;
-  height: 100vh;
-  overflow: hidden;
-  position: relative; /* Required for absolute-positioned background */
+  min-height: 100vh; /* Allow content to exceed viewport height */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  position: relative;
 }
 
 

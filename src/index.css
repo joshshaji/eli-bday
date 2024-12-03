@@ -6,10 +6,11 @@ body {
 
 .app {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Stack elements vertically */
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Allow content to exceed viewport height */
   text-align: center;
+  position: relative; /* For positioning child elements */
 }
 
 .countdown-container {
@@ -42,7 +43,6 @@ body {
   border-radius: 12px;
   font-size: 1.2rem;
   color: #fff; /* Text contrast */
-  width: 100px;
   text-align: center;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
 }
@@ -75,10 +75,42 @@ body {
   height: 100%;
 }
 
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .countdown-container{
+      max-width: 380px;
+    }
+    .timer div span {
+      font-size: 1.5rem;
+    }
+    .timer div {
+      width: 80px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .countdown-container{
+      max-width: 380px;
+    }
+    .timer div span {
+      font-size: 1.5rem;
+    }
+    .timer div {
+      width: 80px;
+    }
+  }
 
+  @media (max-height: 430px) {
+    .content {
+      max-width: 100%;
+      width: 100%;
+      max-height: 100%;
+      height: 100%;
+    }
+    
+  }
 
-
-.slideshow {
+/* .slideshow {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,4 +122,4 @@ body {
   font-weight: 600;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
-}
+} */

@@ -3,153 +3,220 @@
 
 /* Parent Container */
 .birthday-container {
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 200px;
-    width: 100%;
-  }
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  max-height: 300px;
+  width: 100%;
+}
 
-  .birthday-content {
-    display: flex;
-    flex-direction: row; /* Align horizontally */
-    align-items: center;
-    justify-content: space-between; /* Add spacing between text and cake */
-    width: 80%; /* Adjust width as needed */
+.birthday-content {
+  display: flex;
+  flex-direction: row; /* Align horizontally */
+  align-items: center;
+  width: 80%; /* Adjust width as needed */
+  max-width: 1200px; /* Limit the maximum width */
+}
+
+.birthday-text {
+  font-size: 4em;
+  font-family: 'Great Vibes', cursive;
+  color: #ff6f91;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-right: 20px; /* Add spacing between text and cake */
+}
+
+.cake-container {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+
+#cake {
+  width: 200px;
+  height: auto;
+}
+
+/* Additional Styles */
+.birthday-text h1 {
+    font-size: 4em;
   }
   
+  .birthday-text h2 {
+    font-size: 3em;
+  }
+  
+  .birthday-text h1,
+  .birthday-text h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Cake SVG */
+  #cake {
+    display: block;
+    bottom: 110px;
+    position: relative;
+    margin: -15em auto 0 auto;
+  }
+  
+  
+  #cake {
+      display: block;
+      position: relative;
+      margin: -10em auto 0 auto;
+    }
+    
+    /* ============================================== Candle
+    */
+    
+    .velas {
+      background: #ffffff;
+      border-radius: 10px;
+      position: absolute;
+      top: 142px;
+      left: 64.5%;
+      margin-left: -2.4px;
+      margin-top: -8.33333333px;
+      width: 5px;
+      height: 35px;
+      transform: translateY(-300px);
+      backface-visibility: hidden;
+      animation: in 500ms 6s ease-out forwards;
+    }
+    .velas:after,
+    .velas:before {
+      background: rgba(255, 0, 0, 0.4);
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2.22222222px;
+    }
+    .velas:after {
+      top: 15%;
+      left: 0;
+    }
+    .velas:before {
+      top: 45%;
+      left: 0;
+    }
+    
+    /* ============================================== Fire
+    */
+    
+    .fuego {
+      border-radius: 100%;
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      margin-left: -2.6px;
+      width: 6.66666667px;
+      height: 18px;
+    }
+    .fuego:nth-child(1) {
+      animation: fuego 2s 6.5s infinite;
+    }
+    .fuego:nth-child(2) {
+      animation: fuego 1.5s 6.5s infinite;
+    }
+    .fuego:nth-child(3) {
+      animation: fuego 1s 6.5s infinite;
+    }
+    .fuego:nth-child(4) {
+      animation: fuego 0.5s 6.5s infinite;
+    }
+    .fuego:nth-child(5) {
+      animation: fuego 0.2s 6.5s infinite;
+    }
+    
+    /* ============================================== Animation Fire
+    */
+    
+    @keyframes fuego {
+      0%, 100% {
+        background: rgba(254, 248, 97, 0.5);
+        box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        background: rgba(255, 50, 0, 0.1);
+        box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+        transform: translateY(-20px) scale(0);
+      }
+    }
+    
+    @keyframes in {
+      to {
+        transform: translateY(0);
+      }
+    }
+    
+    .text {
+      color: #8b6a60;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-style:italic;
+      text-align: center;
+      h1 {
+        font-size: 1.4em;
+      }
+    }  
+
+@media (max-width: 768px) {
+
+  .velas {
+    top: 153px;
+    left: 50%;
+  }
+  .birthday-content {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .birthday-text {
     font-size: 4em;
-    font-family: 'Great Vibes', cursive;
-    color: #ff6f91;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    margin-right: 20px; /* Add spacing between text and cake */
-  }
-  
-  .cake-container {
-    display: flex;
-    align-items: center;
-  }
-
-.birthday-text h1 {
-  font-size: 4em;
-  /* margin: 0; */
-}
-
-.birthday-text h2 {
-  font-size: 3em;
-  /* margin: 0; */
-}
-
-.birthday-text h1, .birthday-text h2 {
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-/* Cake SVG */
-#cake {
-  display: block;
-  bottom: 50px;
-}
-
-#cake {
-    display: block;
-    position: relative;
-    margin: -10em auto 0 auto;
-  }
-  
-  /* ============================================== Candle
-  */
-  
-  .velas {
-    background: #ffffff;
-    border-radius: 10px;
-    position: absolute;
-    top: 205px;
-    left: 64%;
-    margin-left: -2.4px;
-    margin-top: -8.33333333px;
-    width: 5px;
-    height: 35px;
-    transform: translateY(-300px);
-    backface-visibility: hidden;
-    animation: in 500ms 6s ease-out forwards;
-  }
-  .velas:after,
-  .velas:before {
-    background: rgba(255, 0, 0, 0.4);
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2.22222222px;
-  }
-  .velas:after {
-    top: 15%;
-    left: 0;
-  }
-  .velas:before {
-    top: 45%;
-    left: 0;
-  }
-  
-  /* ============================================== Fire
-  */
-  
-  .fuego {
-    border-radius: 100%;
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    margin-left: -2.6px;
-    width: 6.66666667px;
-    height: 18px;
-  }
-  .fuego:nth-child(1) {
-    animation: fuego 2s 6.5s infinite;
-  }
-  .fuego:nth-child(2) {
-    animation: fuego 1.5s 6.5s infinite;
-  }
-  .fuego:nth-child(3) {
-    animation: fuego 1s 6.5s infinite;
-  }
-  .fuego:nth-child(4) {
-    animation: fuego 0.5s 6.5s infinite;
-  }
-  .fuego:nth-child(5) {
-    animation: fuego 0.2s 6.5s infinite;
-  }
-  
-  /* ============================================== Animation Fire
-  */
-  
-  @keyframes fuego {
-    0%, 100% {
-      background: rgba(254, 248, 97, 0.5);
-      box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
-      transform: translateY(0) scale(1);
-    }
-    50% {
-      background: rgba(255, 50, 0, 0.1);
-      box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
-      transform: translateY(-20px) scale(0);
-    }
-  }
-  
-  @keyframes in {
-    to {
-      transform: translateY(0);
-    }
-  }
-  
-  .text {
-    color: #8b6a60;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-style:italic;
+    margin-right: 0;
+    margin-bottom: 0px;
     text-align: center;
-    h1 {
-      font-size: 1.4em;
+  }
+
+  .cake-container {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .velas {
+    top: 202px;
+    left: 50%;
+  }
+  .birthday-text {
+    margin-top: 60px;
+    font-size: 3em;
+  }
+
+  #cake {
+    width: 150px;
+  }
+}
+
+@media (max-height: 430px) {
+    .birthday-container {
+        margin-top: 10px;
+        min-height: 100px;
     }
-  }  
+    .birthday-text {
+        margin-top: 100px;
+        font-size: 3em;
+        width: 50%;
+    }
+    .velas {
+        top: 50px;
+        left: 63%;
+    }
+    .cake-container {
+        margin-top: 50px;
+    }
+  }
+
