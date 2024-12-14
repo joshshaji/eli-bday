@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/eli-bday/static/css/main.429fc3db.css",
-    "main.js": "/eli-bday/static/js/main.483ebfae.js",
+    "main.js": "/eli-bday/static/js/main.9ce52a26.js",
     "static/js/453.0d0421f9.chunk.js": "/eli-bday/static/js/453.0d0421f9.chunk.js",
     "static/media/Eli11.jpg": "/eli-bday/static/media/Eli11.d41dddd92eec91e6b048.jpg",
     "static/media/Eli12.jpeg": "/eli-bday/static/media/Eli12.8dc0a8597e63c4476b48.jpeg",
@@ -46,11 +46,11 @@
     "static/media/ballon3.svg": "/eli-bday/static/media/ballon3.3662c2e10bb1f32d07458106cb8bdcf7.svg",
     "index.html": "/eli-bday/index.html",
     "main.429fc3db.css.map": "/eli-bday/static/css/main.429fc3db.css.map",
-    "main.483ebfae.js.map": "/eli-bday/static/js/main.483ebfae.js.map",
+    "main.9ce52a26.js.map": "/eli-bday/static/js/main.9ce52a26.js.map",
     "453.0d0421f9.chunk.js.map": "/eli-bday/static/js/453.0d0421f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.429fc3db.css",
-    "static/js/main.483ebfae.js"
+    "static/js/main.9ce52a26.js"
   ]
 }
