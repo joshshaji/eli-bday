@@ -29,9 +29,11 @@
 }
 
 .cake-container {
+  position: relative;
+  /* This makes the .velas position relative to the cake */
   display: flex;
+  justify-content: center;
   align-items: center;
-  max-width: 100%;
 }
 
 #cake {
@@ -71,18 +73,20 @@
     /* ============================================== Candle
     */
     
+/* Position the candle on top of the cake */
     .velas {
-      background: #ffffff;
-      border-radius: 10px;
       position: absolute;
-      top: 142px;
-      left: 64.5%;
-      margin-left: -2.4px;
-      margin-top: -8.33333333px;
+      top: 103px;
+      /* Adjust this value to place the candle on top of the cake */
+      left: 50%;
+      /* Center the candle horizontally */
+      transform: translateX(-50%);
+      transform: translateY(-300px);
+      /* Adjust for centering */
       width: 5px;
       height: 35px;
-      transform: translateY(-300px);
-      backface-visibility: hidden;
+      background: #ffffff;
+      border-radius: 10px;
       animation: in 500ms 6s ease-out forwards;
     }
     .velas:after,
@@ -105,6 +109,7 @@
     /* ============================================== Fire
     */
     
+    /* Fire animation remains the same */
     .fuego {
       border-radius: 100%;
       position: absolute;
@@ -114,18 +119,23 @@
       width: 6.66666667px;
       height: 18px;
     }
+
     .fuego:nth-child(1) {
       animation: fuego 2s 6.5s infinite;
     }
+
     .fuego:nth-child(2) {
       animation: fuego 1.5s 6.5s infinite;
     }
+
     .fuego:nth-child(3) {
       animation: fuego 1s 6.5s infinite;
     }
+
     .fuego:nth-child(4) {
       animation: fuego 0.5s 6.5s infinite;
     }
+
     .fuego:nth-child(5) {
       animation: fuego 0.2s 6.5s infinite;
     }
@@ -166,7 +176,7 @@
 @media (max-width: 768px) {
 
   .velas {
-    top: 153px;
+    top: 2px;
     left: 50%;
   }
   .birthday-content {
@@ -176,19 +186,24 @@
 
   .birthday-text {
     font-size: 4em;
+    margin-top: 200px;
     margin-right: 0;
     margin-bottom: 0px;
     text-align: center;
   }
 
   .cake-container {
-    margin-top: 20px;
+    margin-top: 50px;
+  }
+
+  #cake {
+    top: -210px;
   }
 }
 
 @media (max-width: 480px) {
   .velas {
-    top: 202px;
+    top: 2px;
     left: 50%;
   }
   .birthday-text {
@@ -197,6 +212,7 @@
   }
 
   #cake {
+    top: -110px;
     width: 150px;
   }
 }
@@ -212,7 +228,7 @@
         width: 50%;
     }
     .velas {
-        top: 50px;
+        top: 2px;
         left: 63%;
     }
     .cake-container {

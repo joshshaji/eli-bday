@@ -1,23 +1,65 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Countdown from "./components/Countdown";
 import FloatingHearts from "./components/FloatingHearts";
 import Slideshow from "./components/Slideshow";
-import Background from "./components/Background"; // New background component
+import Background from "./components/Background";
 import BirthdayMessage from "./components/BirthdayMessage";
+// import FlagBanner from "./components/PennantBanner";
+import RoadSceneComponent from "./components/Timeline";
+import BirthdayAnimation from "./components/AnimatedMessage";
 import "./index.css";
+// import LifeTimeline from "./components/Timeline";
+import Timeline from "./components/Timeline";
 
 function App() {
   return (
-    <div className="app">
-      <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"></link>
-      <Background />
-      <FloatingHearts />
-      <div className="content">
-        <BirthdayMessage />
-        <Slideshow />
-        <Countdown />
+    <Router>
+      <div className="app">
+        <link
+          href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+          rel="stylesheet"
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
+          rel="stylesheet"
+        ></link>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className="content">
+                <Background />
+                <FloatingHearts />
+                <BirthdayMessage />
+                <Slideshow />
+                <Countdown />
+              </div>
+            }
+          />
+          <Route
+            path="/message"
+            element={
+              <div>
+                <Background />
+                <FloatingHearts />
+                <BirthdayAnimation />
+              </div>
+            }
+          />
+          <Route
+            path="/timeline"
+            element={
+              <div>
+                <Background />
+                <FloatingHearts />
+                <Timeline />
+              </div>
+            }
+          />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 

@@ -7,13 +7,6 @@ const BirthdayMessage = () => {
       <div className="birthday-content">
         <h1 className="birthday-text">Feliz Cumpleaños Mi Amor</h1>
         <div className="cake-container">
-          <div className="velas">
-            <div className="fuego"></div>
-            <div className="fuego"></div>
-            <div className="fuego"></div>
-            <div className="fuego"></div>
-            <div className="fuego"></div>
-          </div>
           <svg
             id="cake"
             version="1.1"
@@ -182,6 +175,13 @@ const BirthdayMessage = () => {
             </path>
             <rect x="10" y="475.571" fill="#fefae9" width="180" height="4" />
           </svg>
+          <div className="velas">
+            <div className="fuego"></div>
+            <div className="fuego"></div>
+            <div className="fuego"></div>
+            <div className="fuego"></div>
+            <div className="fuego"></div>
+          </div>
         </div>
       </div>
     </div>

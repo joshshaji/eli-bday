@@ -16,9 +16,10 @@
   
   .carousel-slide {
     position: absolute;
-    width: 400px; /* Make slides narrower for a more stretched layout */
-    height: 100%; /* Ensure slides fill the container */
-    background-size: cover;
+    width: 225px; /* Make slides narrower for a more stretched layout */
+    height: 350px; /* Ensure slides fill the container */
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
     border-radius: 15px;
     transition: transform 0.8s ease, opacity 0.8s ease;

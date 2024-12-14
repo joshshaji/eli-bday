@@ -14,7 +14,7 @@ const FloatingHearts = () => {
         left: Math.random() * 90 + 5, // Random horizontal position (5% - 95%)
         size: Math.random() * 20 + 30, // Random size (30px - 50px)
         broken: false, // Whether the heart is clicked and broken
-        animationDuration: Math.random() * 5 + 5, // Random duration (5s - 10s)
+        animationDuration: Math.random() * 10 + 15, // Random duration (5s - 10s)
       };
       setHearts((prevHearts) => [...prevHearts, newHeart]);
 
