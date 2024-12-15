@@ -1,15 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Countdown from "./components/Countdown";
 import FloatingHearts from "./components/FloatingHearts";
 import Slideshow from "./components/Slideshow";
 import Background from "./components/Background";
 import BirthdayMessage from "./components/BirthdayMessage";
-// import FlagBanner from "./components/PennantBanner";
-import RoadSceneComponent from "./components/Timeline";
 import BirthdayAnimation from "./components/AnimatedMessage";
 import "./index.css";
-// import LifeTimeline from "./components/Timeline";
 import Timeline from "./components/Timeline";
 
 function App() {

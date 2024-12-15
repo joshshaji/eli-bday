@@ -28,7 +28,7 @@ const Countdown = () => {
   }, [navigate]);
 
   function calculateTimeLeft() {
-    const birthday = new Date("2024-12-18T05:00:00.000Z");
+    const birthday = new Date("2024-12-11T05:00:00.000Z");
     const now = new Date();
     const difference = birthday - now;
 

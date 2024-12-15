@@ -5,17 +5,17 @@ import Eli1 from "../assets/Eli1.JPG"
 import Eli2 from "../assets/Eli2.JPG";
 import Eli3 from "../assets/Eli3.JPG";
 import Eli4 from "../assets/Eli4.JPG";
-import Eli5 from "../assets/Eli5.png";
-import Eli6 from "../assets/Eli6.png";
+import Eli5 from "../assets/Eli5.jpg";
+import Eli6 from "../assets/Eli6.jpg";
 import Eli7 from "../assets/Eli7.JPG";
 import Eli8 from "../assets/Eli8.JPG";
-import Eli9 from "../assets/Eli9.png";
-import Eli11 from "../assets/Eli11.png";
+import Eli9 from "../assets/Eli9.jpg";
+import Eli11 from "../assets/Eli11.jpg";
 import Eli12 from "../assets/Eli12.jpeg";
 import Eli13 from "../assets/Eli13.jpeg";
-import Eli14 from "../assets/Eli14.png";
-import Eli15 from "../assets/Eli15.png";
-import Eli16 from "../assets/Eli16.png";
+import Eli14 from "../assets/Eli14.jpg";
+import Eli15 from "../assets/Eli15.jpg";
+import Eli16 from "../assets/Eli16.jpg";
 import EliBeach from "../assets/EliBeach.jpeg";
 import Us from "../assets/us.jpeg";
 

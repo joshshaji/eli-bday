@@ -1,5 +1,5 @@
 // Timeline.js
-import React, { useEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Timeline.css';
@@ -14,15 +14,15 @@ import Pic7 from "../assets/La pintura.jpg";
 import Pic8 from "../assets/Coraje.jpg";
 import Pic9 from "../assets/Cuando me di cuenta de que eres mio.jpg";
 import Pic10 from "../assets/Love youu.jpg";
-import Pic11 from "../assets/Primera sugerencia de canción.PNG";
+import Pic11 from "../assets/Primera sugerencia de canción.jpg";
 import Pic12 from "../assets/Primera vez que envié flores.jpg";
 import Pic13 from "../assets/Viaje con tus amigos.jpg";
-import Pic14 from "../assets/La Pulsera.PNG";
+import Pic14 from "../assets/La Pulsera.jpg";
 import Pic15 from "../assets/Dijiste que sí.jpeg";
 import Pic16 from "../assets/La primera comida india.jpeg";
-import Pic17 from "../assets/Primera vez que nos conocimos.jpg";
-import Pic18 from "../assets/Nuestro primer beso.jpg";
-import Pic19 from "../assets/Nuestro segundo viaje.jpg";
+import Pic17 from "../assets/Primera vez que nos conocimos.jpeg";
+import Pic18 from "../assets/Nuestro primer beso.jpeg";
+import Pic19 from "../assets/Nuestro segundo viaje.jpeg";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -85,7 +85,7 @@ const events = [
   {
     date: '1 Diciembre 2022',
     title: 'Love youu',
-    description: 'Primera vez que dijiste "te amo" en un video y realmente lo sentí',
+    description: 'Primera vez que dijiste "Love youuu" en un video y realmente lo sentí. El día más feliz de mi vida ❤️',
     image: Pic10,
   },
   {
@@ -115,7 +115,7 @@ const events = [
   {
     date: '14 Marzo 2023',
     title: 'Dijiste que sí',
-    description: 'Te pedí que fueras mi novia y dijiste que sí❤️',
+    description: 'Jajaja me odiarás por esta foto, pero este es el día te pedí que fueras mi novia y dijiste que sí❤️',
     image: Pic15,
   },
   {
@@ -147,13 +147,17 @@ const events = [
 const Timeline = () => {
   const timelineRef = useRef([]);
 
+  // Clear refs on each render
+  timelineRef.current = [];
+
   const addToRefs = (el) => {
     if (el && !timelineRef.current.includes(el)) {
       timelineRef.current.push(el);
     }
   };
 
-  useEffect(() => {
+
+  useLayoutEffect(() => {
     timelineRef.current.forEach((el) => {
       const tl = gsap.timeline({
         scrollTrigger: {

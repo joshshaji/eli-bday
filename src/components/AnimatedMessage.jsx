@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import './AnimatedMessage.css'; // same CSS as before
 
 // Import assets
-import profilePicture from '../assets/Eli10.png';
+import profilePicture from '../assets/Eli10.jpg';
 import hatImage from '../assets/hat.svg';
 import ballon1 from '../assets/ballon1.svg';
 import ballon2 from '../assets/ballon2.svg';
@@ -356,7 +356,7 @@ const BirthdayAnimation = () => {
             Feliz cumpleaños bebe! Espero que este año blah blah blah blah.... 
             Te amo.. muaaaa
           </p>
-          <p className="fake-btn">Send</p>
+          <p className="fake-btn">Enviar</p>
         </div>
       </div>
 
@@ -473,7 +473,7 @@ const BirthdayAnimation = () => {
         <p id="replay" onClick={() => navigate("/timeline")}>
           tócame para más
         </p>
-        <p className="last-smile">:)</p>
+        <p className="last-smile" onClick={() => navigate("/timeline")}>:)</p>
       </div>
     </div>
   );
