@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/eli-bday/static/css/main.429fc3db.css",
-    "main.js": "/eli-bday/static/js/main.9ce52a26.js",
-    "static/js/453.0d0421f9.chunk.js": "/eli-bday/static/js/453.0d0421f9.chunk.js",
+    "main.css": "/eli-bday/static/css/main.cdce8805.css",
+    "main.js": "/eli-bday/static/js/main.04bc154d.js",
+    "static/js/453.49ddb7b7.chunk.js": "/eli-bday/static/js/453.49ddb7b7.chunk.js",
     "static/media/Eli11.jpg": "/eli-bday/static/media/Eli11.d41dddd92eec91e6b048.jpg",
+    "static/media/boss-baby.jpeg": "/eli-bday/static/media/boss-baby.248118d9224f7c2805a5.jpeg",
     "static/media/Eli12.jpeg": "/eli-bday/static/media/Eli12.8dc0a8597e63c4476b48.jpeg",
     "static/media/La primera comida india.jpeg": "/eli-bday/static/media/La primera comida india.f5bd8a384b611feb3d66.jpeg",
     "static/media/EliBeach.jpeg": "/eli-bday/static/media/EliBeach.e2596c9736040ea783fe.jpeg",
@@ -18,6 +19,7 @@
     "static/media/Eli4.JPG": "/eli-bday/static/media/Eli4.693154ab874cbf3fc3d1.JPG",
     "static/media/Nuestro primer beso.jpeg": "/eli-bday/static/media/Nuestro primer beso.1727c25be811c19d9988.jpeg",
     "static/media/Eli8.JPG": "/eli-bday/static/media/Eli8.6ad3c31ec1c287320bfe.JPG",
+    "static/media/micorazon.jpeg": "/eli-bday/static/media/micorazon.5e518dc6afc369539b4d.jpeg",
     "static/media/Eli1.JPG": "/eli-bday/static/media/Eli1.778e8387fab1bddea626.JPG",
     "static/media/Eli7.JPG": "/eli-bday/static/media/Eli7.ca681b26aee3023767fa.JPG",
     "static/media/Primera sugerencia de canción.jpg": "/eli-bday/static/media/Primera sugerencia de canción.4398a5a14f6c36eaa6b6.jpg",
@@ -44,13 +46,15 @@
     "static/media/ballon2.svg": "/eli-bday/static/media/ballon2.1db9f50a2cfc323929082d5a5f9ef09e.svg",
     "static/media/ballon1.svg": "/eli-bday/static/media/ballon1.0bff3ee4240c8cd11ff9c90d24072ff4.svg",
     "static/media/ballon3.svg": "/eli-bday/static/media/ballon3.3662c2e10bb1f32d07458106cb8bdcf7.svg",
+    "static/media/female-footprint-left.svg": "/eli-bday/static/media/female-footprint-left.f4c29e68d5f71bc68b23f6567c4b0d8f.svg",
+    "static/media/female-footprint-right.svg": "/eli-bday/static/media/female-footprint-right.db8e5cd6c4d2c6d994b36c56b2abca5b.svg",
     "index.html": "/eli-bday/index.html",
-    "main.429fc3db.css.map": "/eli-bday/static/css/main.429fc3db.css.map",
-    "main.9ce52a26.js.map": "/eli-bday/static/js/main.9ce52a26.js.map",
-    "453.0d0421f9.chunk.js.map": "/eli-bday/static/js/453.0d0421f9.chunk.js.map"
+    "main.cdce8805.css.map": "/eli-bday/static/css/main.cdce8805.css.map",
+    "main.04bc154d.js.map": "/eli-bday/static/js/main.04bc154d.js.map",
+    "453.49ddb7b7.chunk.js.map": "/eli-bday/static/js/453.49ddb7b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.429fc3db.css",
-    "static/js/main.9ce52a26.js"
+    "static/css/main.cdce8805.css",
+    "static/js/main.04bc154d.js"
   ]
 }
