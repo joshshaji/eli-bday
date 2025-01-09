@@ -14,17 +14,17 @@ const Background = () => {
   };
 
   useEffect(() => {
-    const numberOfShapes = 20; // Reduced the number of shapes for more spacing
+    const numberOfShapes = 20; 
     const newShapes = [];
 
     for (let i = 0; i < numberOfShapes; i++) {
-      const size = Math.floor(Math.random() * 200) + 100; // Random size between 100 and 300
+      const size = Math.floor(Math.random() * 200) + 100; 
       const color = `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(
         Math.random() * 256
-      )}, ${Math.floor(Math.random() * 256)}, ${(Math.random() * 0.3 + 0.1).toFixed(2)})`; // Opacity between 0.1 and 0.4
-      const top = `${Math.floor(Math.random() * 100)}%`; // Random top position from 0% to 100%
-      const left = `${Math.floor(Math.random() * 100)}%`; // Random left position from 0% to 100%
-      const animationDelay = `${Math.random() * 8}s`; // Random delay between 0s and 8s
+      )}, ${Math.floor(Math.random() * 256)}, ${(Math.random() * 0.3 + 0.1).toFixed(2)})`; 
+      const top = `${Math.floor(Math.random() * 100)}%`;
+      const left = `${Math.floor(Math.random() * 100)}%`; 
+      const animationDelay = `${Math.random() * 8}s`;
 
       newShapes.push({
         size,
