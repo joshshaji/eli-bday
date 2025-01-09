@@ -1,5 +1,3 @@
-/* Timeline.css */
-
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -7,9 +5,12 @@ body {
     color: #1d1d1f;
     margin: 0;
     padding: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+}
+
+#memory {
+    color: #d6336c;
+    text-align: center;
+    margin-top: 50px;
 }
 
 .timeline-container {
@@ -17,8 +18,28 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 30% 20px;
+    overflow: hidden;
 }
 
+/* Inner wrapper to ensure footprints overlay correctly */
+.timeline-inner {
+    position: relative;
+}
+
+/* Vertical line in the center */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ffd6e7, #fff0f6);
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* Timeline items */
 .timeline-item {
     position: relative;
     margin-bottom: 200px;
@@ -29,12 +50,6 @@ body {
     color: #d6336c;
     text-align: center;
     margin-bottom: 40px;
-}
-
-#memory {
-    color: #d6336c;
-    text-align: center;
-    margin-top: 50px;
 }
 
 .timeline-content {
@@ -78,19 +93,6 @@ body {
     color: #6e6e6e;
 }
 
-/* Vertical line in the center */
-.timeline-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(to bottom, #ffd6e7, #fff0f6);
-    transform: translateX(-50%);
-    z-index: -1;
-}
-
 /* Circles on the timeline */
 .timeline-item::before {
     content: '';
@@ -105,27 +107,44 @@ body {
     transform: translateX(-50%);
 }
 
-/* Footprints */
-.footprint {
+.timeline-content-wrapper {
+    position: relative;
+    background-color: rgba(255, 240, 246, 0.85);
+    /* Semi-transparent background */
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* Add this to hide footprints behind content */
+.timeline-content-wrapper::before {
+    content: '';
     position: absolute;
-    width: 50px;
-    height: 100px;
-    background-size: contain;
-    background-repeat: no-repeat;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background-color: #fff0f6;
+    /* Same as your body background */
+    z-index: -1;
 }
 
-.female-footprint {
-    top: 0;
-    left: calc(50% - 80px);
-    /* Adjust to position footprint on the left side */
-    z-index: 1;
+/* .footprint {
+    width: 20px;
+    height: auto;
+    opacity: 0.8;
+    z-index: -5;
+    
+} */
+
+.footprint.left {
+    margin-right: auto;
+    margin-left: 50px;
+    
 }
 
-.male-footprint {
-    top: 0;
-    left: calc(50% + 30px);
-    /* Adjust to position footprint on the right side */
-    z-index: 1;
+.footprint.right {
+    margin-left: auto;
+    margin-right: 55px;
 }
 
 /* Responsive adjustments for smaller screens */
@@ -165,7 +184,6 @@ body {
         font-size: 0.95rem;
     }
 
-    /* Adjust the position of the timeline line and circles */
     .timeline-container::before {
         left: 50%;
         transform: translateX(-50%);
@@ -175,13 +193,45 @@ body {
         left: 50%;
         transform: translateX(-50%);
     }
+}
 
-    /* Adjust footprints for smaller screens */
-    .female-footprint {
-        left: calc(50% - 70px);
-    }
+.footprints-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: calc(100% - 100px);
+    width: 120px;
+    pointer-events: none;
+    z-index: -1;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+}
 
-    .male-footprint {
-        left: calc(50% + 20px);
-    }
+.footprint-set {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 30px;
+    opacity: 0;
+    transform: rotate(180deg);
+    /* Reduce the spacing between footprints */
+    top: calc(var(--index) * 50px + 50px);
+}
+
+.footprint {
+    width: 8px;
+    height: auto;
+    opacity: 0.8;
+    filter: drop-shadow(0 0 3px rgba(214, 51, 108, 0.4));
+    transition: all 0.3s ease;
+}
+
+.footprint.left {
+    transform: rotate(-12deg) translateX(-8px);
+}
+
+.footprint.right {
+    transform: rotate(12deg) translateX(8px);
 }

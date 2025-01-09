@@ -48,7 +48,7 @@ function App() {
             path="/timeline"
             element={
               <div>
-                <Background />
+                {/* <Background /> */}
                 <FloatingHearts />
                 <Timeline />
               </div>
