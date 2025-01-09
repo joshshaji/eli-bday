@@ -11,7 +11,7 @@ const Countdown = () => {
       const newTimeLeft = calculateTimeLeft();
       setTimeLeft(newTimeLeft);
 
-      // Check if the countdown has finished
+      
       if (
         newTimeLeft.days <= 0 &&
         newTimeLeft.hours <= 0 &&
@@ -19,8 +19,8 @@ const Countdown = () => {
         newTimeLeft.seconds <= 0
       ) {
         clearInterval(timer);
-        // Navigate to the desired component
-        navigate("/message"); // Replace with your target route
+
+        navigate("/message"); 
       }
     }, 1000);
 
