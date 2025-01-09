@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap, Expo, Elastic } from 'gsap';
 import { useNavigate } from "react-router-dom"; 
-import './AnimatedMessage.css'; // same CSS as before
+import './AnimatedMessage.css'; 
 
-// Import assets
+
 import profilePicture from '../assets/Eli10.jpg';
 import hatImage from '../assets/hat.svg';
 import ballon1 from '../assets/ballon1.svg';
@@ -15,8 +15,6 @@ const BirthdayAnimation = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Delay the start of the animation slightly
-    // This mimics the delay introduced by the alert and ensures DOM is fully ready
     const timeoutId = setTimeout(() => {
       const container = containerRef.current;
       if (!container) return;
@@ -29,7 +27,6 @@ const BirthdayAnimation = () => {
         return;
       }
 
-      // Split chars
       textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML.split('').join('</span><span>')}</span>`;
       hbd.innerHTML = `<span>${hbd.innerHTML.split('').join('</span><span>')}</span>`;
 
