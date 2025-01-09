@@ -8,27 +8,27 @@ const FloatingHearts = () => {
 
   useEffect(() => {
     const generateHeart = () => {
-      const id = Date.now() + Math.random(); // Unique ID for each heart
+      const id = Date.now() + Math.random(); 
       const newHeart = {
         id,
-        left: Math.random() * 90 + 5, // Random horizontal position (5% - 95%)
-        size: Math.random() * 20 + 30, // Random size (30px - 50px)
-        kissed: false, // Whether the heart has been clicked and turned into a kiss emoji
-        animationDuration: Math.random() * 8 + 12, // Random duration (15s - 25s)
+        left: Math.random() * 90 + 5, 
+        size: Math.random() * 20 + 30, 
+        kissed: false, 
+        animationDuration: Math.random() * 8 + 12,
       };
       setHearts((prevHearts) => [...prevHearts, newHeart]);
 
-      // Remove heart after maximum duration
+
       setTimeout(() => {
         setHearts((prevHearts) =>
           prevHearts.filter((heart) => heart.id !== id)
         );
-      }, (newHeart.animationDuration + 1) * 1000); // Remove after duration + buffer
+      }, (newHeart.animationDuration + 1) * 1000); 
     };
 
-    // Generate a heart at regular intervals
-    const interval = setInterval(generateHeart, 2000); // New heart every 0.8 seconds
-    return () => clearInterval(interval); // Cleanup on component unmount
+
+    const interval = setInterval(generateHeart, 2000); 
+    return () => clearInterval(interval);
   }, []);
 
   const handleKiss = (id) => {
@@ -53,7 +53,7 @@ const FloatingHearts = () => {
             width: `${heart.size}px`,
             height: `${heart.size}px`,
             animationDuration: `${heart.animationDuration}s`,
-            bottom: `-${heart.size / 2}px`, // Adjust starting position
+            bottom: `-${heart.size / 2}px`, 
           }}
           onClick={() => handleKiss(heart.id)}
         >
